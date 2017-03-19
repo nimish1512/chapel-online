@@ -13,6 +13,7 @@ Note:
   3) type the following command below this line : (%sudo   ALL=(ALL:ALL) ALL)
       Type this: your_username ALL= NOPASSWD: /absolute/path/to/file
   4) Save and exit
+  5) Replace your_username with "Your username" in sch.sh Haha!!
   
 Working Features:
 1) Full Restful API
