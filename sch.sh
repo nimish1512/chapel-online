@@ -1,1 +1,1 @@
-chown nemo1521 $1
+chown your_username $1
