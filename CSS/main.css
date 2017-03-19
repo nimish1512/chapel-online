@@ -1,0 +1,73 @@
+.navbar-customb {
+	color: white;
+	font-weight: bold;
+}
+.wrapper {
+	width:90%;
+	overflow-x:auto;
+	overflow-y:auto;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrap {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 200px;
+}
+.hit{
+	width: 5%;
+	margin-top: 2%;
+	font-weight: bold;
+}
+.editor {
+	width:80%;
+	height:100%;
+	box-shadow: 10px 10px 5px #888888;
+	font-family: Sans-serif;
+	font-size: 100%;
+	color: #000;
+}
+
+.tt {
+	font-size: 170%;
+	font-weight: bolder;
+}
+
+.result {
+	width:90%;
+	height:100%;
+	border-radius: 3px;
+	border:1px solid #888888;
+	box-shadow: 10px 10px 5px #888888;
+	font-family: Sans-serif;
+	font-size: 100%;
+	color: #000;
+}
+
+div.numberedtextarea-wrapper {
+	position: relative;
+}
+div.numberedtextarea-wrapper textarea {
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+div.numberedtextarea-line-numbers {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color:#e4ebe4;
+	width: 60px;
+	border-right: 5px solid #ff8033;
+	color:#03bd11;
+	overflow: hidden;
+}
+div.numberedtextarea-number {
+	padding-right: 16px;
+	text-align: left;
+}
