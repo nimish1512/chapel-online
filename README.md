@@ -21,6 +21,7 @@ Working Features:
 3) Permission Management for files
 4) Basic UI
 5) Compilation Error handling
+6) Temporary file management
 
 Work in Progress:
 1) Full fledge code editor with code highlighting support for Chapel
