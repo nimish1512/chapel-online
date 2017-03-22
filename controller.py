@@ -17,23 +17,20 @@ changes the ownership of .chpl file to your user acc.
 os.system(change_owner)
 '''
 The standard 'chpl -o executable_name filename' command
-for compiling a chapel program. In this case, relative 
+for compiling a chapel program. In this case, absolute 
 path to the 'chpl' binary has been given. You can run 
 the same by giving only 'chpl' if CHPL_HOME environment
-variable is set on your system. Usually, chapel binary is found in
-chapel/bin/linux64/
+variable is set on your system
 '''
-error = Popen(['chpl','-o',executable,filename],stdout=PIPE,stderr=PIPE)
+error = Popen(['/home/nemo1521/chapel/chapel-1.14.0/bin/linux64/chpl','-o',executable,filename],stdout=PIPE,stderr=PIPE)
 op = error.communicate()
 '''
 Checking for compilation errors
-'''
-if op[1]:
-	print(str(op[1])+str("//error"))
-'''
 If no errors found, run the executable and capture the output
 of the program. Send this output to the calling PHP file.
 '''
+if op[1]:
+	print(str(op[1])+str("//error"))
 else:
 	run = './'+executable
 	execute = Popen([run], stdin=PIPE, stdout=PIPE)
