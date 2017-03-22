@@ -17,9 +17,12 @@
 	height: 200px;
 }
 .hit{
-	width: 5%;
-	margin-top: 2%;
-	font-weight: bold;
+	width:14%;
+	margin-top:2%;
+	font-weight:bold;
+	margin-right:20%;
+	height:40px;
+	font-size: 120%;
 }
 .editor {
 	width:80%;
@@ -29,17 +32,30 @@
 	font-size: 100%;
 	color: #000;
 }
-
 .tt {
 	font-size: 170%;
 	font-weight: bolder;
 }
 
+.success {
+	color:#33cc00;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin-right: 2%;
+}
+.error {
+	color:#e60000;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin-right: 2%;
+}
+
 .result {
-	width:90%;
+	width:80%;
 	height:100%;
 	border-radius: 3px;
 	border:1px solid #888888;
+	margin-top: 0.2%;
 	box-shadow: 10px 10px 5px #888888;
 	font-family: Sans-serif;
 	font-size: 100%;
