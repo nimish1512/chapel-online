@@ -1,32 +1,58 @@
-# chapel-online
+# Chapel-Online
+
 GSOC 17 project prototype for Chapel(Web development Idea)
 
-Requirements:
-1) Apache2 Server (not neeed for browser client)
-    Command : sudo apt-get install apache2  and then sudo /etc/init.d/apache2 restart
-2) Chapel Compiler (onot neeed for browser client)
-    Refer here: http://chapel.cray.com/download.html  
-3) Python 3 n above (not neeed for browser client)
-    Command : sudo apt-get install python3
-4) PHP 5 (not neeed for browser client)
-    Command : sudo apt-get install php5 libapache2-mod-php5
-Install:
-1) clone the repository
-2) change directory to chapel-online
-3) Run setup file : "sudo bash setup.sh your_username"
-4) open your favourite browser and type in the url field: "localhots:80/chapel-online/"
+## Getting Started
 
-Working Features:
-1) Full Restful API
-2) Dynamic File and executable generation
-3) Permission Management for files
-4) Basic UI
-5) Compilation Error handling
-6) Temporary file management
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Work in Progress:
-1) Full fledge code editor with code highlighting support for Chapel
-2) Support for run-time input to programs
-3) Better file organisation at Backend
-4) Logs geneation and Performance analysis
+### Prerequisites
 
+Things that you'll need :
+```
+sudo apt-get install apache2
+sudo /etc/init.d/apache2 restart
+Download and build chapel : http://chapel.cray.com/download.html
+sudo apt-get install python3
+sudo apt-get install php5 libapache2-mod-php5
+```
+
+### Installing
+
+Steps to setup your working environment
+```
+git clone https://github.com/nimish1512/chapel-online.git
+
+```
+```
+cd chapel-online/
+```
+Give your username as the first parameter
+```
+sudo bash setup.sh username
+```
+## Running the tests
+Open up your favourite browser and type the follwoing in url bar
+```
+localhost:80/chapel-online/
+```
+
+## Deployment
+
+Additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Bootstrap](http://getbootstrap.com/getting-started/) - Frontend framework 
+* [PHP 5](https://maven.php.org/) - Restful API
+* [Python 3.4](https://python.org) - Main controllers
+
+## Authors
+
+* **Nimish Ronghe** - *Initial work* - [Tensorflow](https://github.com/nimish1512)
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
