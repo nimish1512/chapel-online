@@ -25,11 +25,18 @@ git clone https://github.com/nimish1512/chapel-online.git
 
 ```
 ```
-cd chapel-online/
+sudo mv chapel-online /var/www/
 ```
-Give your username as the first parameter
+Providing necessary permissions (please take a backup of /etc/sudoers file before doing this)
 ```
-sudo bash setup.sh username
+sudo visudo
+```
+Append this at the end of the file. Replace USERNAME with your user_name
+```
+USERNAME ALL = NOPASSWD: /var/www/chapel-online/bash sch.sh
+```
+```
+Hit Ctrl+x to save and exit
 ```
 ## Running the tests
 Open up your favourite browser and type the following in url bar
