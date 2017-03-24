@@ -32,7 +32,7 @@ Give your username as the first parameter
 sudo bash setup.sh username
 ```
 ## Running the tests
-Open up your favourite browser and type the follwoing in url bar
+Open up your favourite browser and type the following in url bar
 ```
 localhost:80/chapel-online/
 ```
