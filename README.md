@@ -43,7 +43,12 @@ Open up your favourite browser and type the following in url bar
 ```
 localhost:80/chapel-online/
 ```
-
+Demo
+```
+![Landing_page](https://github.com/nimish1512/chapel-online/blob/master/landing_page.png)
+![Compiling_page](https://github.com/nimish1512/chapel-online/blob/master/compiling.png)
+![Output_page](https://github.com/nimish1512/chapel-online/blob/master/output_page.png)
+```
 ## Deployment
 
 Additional notes about how to deploy this on a live system
