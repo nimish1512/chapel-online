@@ -16,11 +16,21 @@
 	margin-right: auto;
 	height: 200px;
 }
+
 .hit{
-	width:14%;
+	width:8%;
 	margin-top:2%;
 	font-weight:bold;
 	margin-right:20%;
+	height:40px;
+	font-size: 120%;
+}
+
+.hit-r{
+	width:8%;
+	margin-top:2%;
+	font-weight:bold;
+	margin-right:2%;
 	height:40px;
 	font-size: 120%;
 }
