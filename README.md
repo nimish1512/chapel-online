@@ -45,9 +45,9 @@ localhost:80/chapel-online/
 ```
 Demo
 ```
-![Alt text](https://github.com/nimish1512/chapel-online/blob/master/landing_page.png)
-![Compiling_page](https://github.com/nimish1512/chapel-online/blob/master/compiling.png)
-![Output_page](https://github.com/nimish1512/chapel-online/blob/master/output_page.png)
+![Landing_page](landing_page.png)
+![Compiling_page](compiling.png)
+![Output_page](output_page.png)
 ```
 ## Deployment
 
