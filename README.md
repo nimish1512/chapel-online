@@ -44,13 +44,16 @@ Open up your favourite browser and type the following in url bar
 localhost:80/chapel-online/
 ```
 Demo
-```Landing Page
+```
+Landing Page
 ```
 ![Landing_page](https://github.com/nimish1512/chapel-online/blob/master/landing_page.png)
-```Compiling Page
+```
+Compiling Page
 ```
 ![Compiling_page](compiling.png)
-```Result Page
+```
+Result Page
 ```
 ![Output_page](output_page.png)
 
