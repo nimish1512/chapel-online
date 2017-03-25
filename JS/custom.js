@@ -17,9 +17,14 @@ $(function() {
 	editing area. Customization of line numbers can be done by passing in
 	arguements as shown below or by changing CSS classes from main.css
 	file.
-	*/  
+	*/ 
 	$("#comment").numberedtextarea({
 		allowTabChar:true,
+	});
+	//Resetting the code editing area
+	$('.hit-r').on('click',function(event){
+		event.preventDefault();
+		document.getElementById("comment").value = '';	
 	});
 	//Take action on click of Compile & Run button
 	$('.hit').on('click', function(event){
