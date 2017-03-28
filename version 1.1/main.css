@@ -1,0 +1,65 @@
+
+.wrapper {
+	width:100%;
+	height:auto;
+}
+.f_half {
+    float: left;
+    width: 49%;
+}
+.s_half {
+    float: right;
+    width: 49%;
+    height: 500px;
+    margin: 0;
+    float: none;
+}
+.terminal {
+    width: 99%;
+    height: 300px;
+    color: #fff;
+    padding-left: 3%;
+    background-color: #000;
+    overflow-y: auto;
+}
+.dsc {
+    margin-right: 1%;    
+}
+.cascader {
+    margin-top: 5%;
+    width: 25%;
+    background-color: #00b33c;
+    font-family: sans-serif;
+    font-size: 120%;
+    color: #fff;
+}
+.reset {
+    margin-left: 12.5%;
+}
+.pause {
+    margin-right: 1%;
+}
+#editor {
+    /*margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    width: 99%;
+    height: 500px;
+    margin-left: 2%;
+    position: relative;
+}
+.navbar-inverse {
+    background-color: #000;
+}
+.navbar-customb {
+    color: 
+}
+
+.tt {
+    font-size: 220%;
+    color: #000;
+    margin-left: 30%;
+}
