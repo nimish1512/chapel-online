@@ -15,7 +15,7 @@ class MyServerProtocol(WebSocketServerProtocol):
             self.cli = client
             self.file_locate = {'/home/nemo1521/twisted-gsoc/final/files/':{'bind':'/mnt/source/','mode':'rw'}}
             self.cont = self.cli.containers.create(image="buildpack-deps:latest",detach=False,mem_limit=2147483648,memswap_limit=2147483648,tty=True,volumes=self.file_locate,working_dir='/mnt/source')
-            self.file_name= 'base_main.c'	
+            self.file_name= ''.join(random.choice(string.lowercase) for i in range(5))	
         except Exception:
             print("Failed"+str(Exception))    
 
@@ -32,7 +32,7 @@ class MyServerProtocol(WebSocketServerProtocol):
     			self.sendMessage(rep)
 
     		elif data=="resume,!!" or self.cont.status=="paused":
-    			print(self.cont.status+str("kickass"))
+    			print(self.cont.status)
     			self.cont.unpause()
     			print("Resumed")
     			rep = "Program Resumed"
@@ -40,15 +40,15 @@ class MyServerProtocol(WebSocketServerProtocol):
     			self.sendMessage(rep)
 
     		else:	
-    			f = open('/home/nemo1521/twisted-gsoc/final/files/'+self.file_name,'w+')
+    			f = open('/home/nemo1521/twisted-gsoc/final/files/'+self.file_name+'.c','w+')
     			f.write(data)
     			f.close()
     			print("file created")
     			self.cont.start()
-    			ans = self.cont.exec_run(cmd="gcc "+self.file_name,stdout=True,stderr=True,stdin=False,tty=False,privileged=False,user='root',detach=False,stream=True)
+    			ans = self.cont.exec_run(cmd="gcc -o "+self.file_name+" "+self.file_name+".c",stdout=True,stderr=True,stdin=False,tty=False,privileged=False,user='root',detach=False,stream=True)
     			if ans:
     				print("In here")
-    				ans  = self.cont.exec_run(cmd="./a.out",stdout=True,stderr=True,stdin=False,tty=False,privileged=False,user='root',detach=False,stream=True)
+    				ans  = self.cont.exec_run(cmd="./"+self.file_name,stdout=True,stderr=True,stdin=False,tty=False,privileged=False,user='root',detach=False,stream=True)
     			for lines in ans:
     				print(lines.strip())
     				en_line = lines.encode('utf8')
