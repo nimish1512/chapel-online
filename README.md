@@ -33,8 +33,9 @@ Providing necessary permissions (please take a backup of /etc/sudoers file befor
 Copying client to www folder
 ```
 sudo mkdir /var/www/chapel-online
-sudo mv  -v path/to/cloned-directory/version 1.1/client/* /var/www/chapel-online/
-sudo mv  -v path/to/cloned-directory/version 1.1/src/* /var/www/chapel-online/
+sudo mkdir /var/www/chapel-online/src
+sudo mv  -v path/to/cloned-directory/version\ 1.1/client/* /var/www/chapel-online/
+sudo mv  -v path/to/cloned-directory/version\ 1.1/src/* /var/www/chapel-online/src/
 ```
 ## Running the tests
 Open up your favourite browser and type the following in url bar
