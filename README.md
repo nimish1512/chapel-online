@@ -10,33 +10,32 @@ These instructions will get you a copy of the project up and running on your loc
 
 Things that you'll need :
 ```
-sudo apt-get install apache2
-sudo /etc/init.d/apache2 restart
+python 2.7.9
+Autobahn
+Twisted 17.9.0
 Download and build chapel : http://chapel.cray.com/download.html
-sudo apt-get install python3
-sudo apt-get install php5 libapache2-mod-php5
+Apache Server
+Docker
 ```
 
 ### Installing
 
 Steps to setup your working environment
 ```
-git clone https://github.com/nimish1512/chapel-online.git
+sudo apt-get install apache2
+pip install autobahn[twisted]
+pip install docker
+pip install twisted
+```
+```
 
 ```
-```
-sudo mv chapel-online /var/www/
-```
 Providing necessary permissions (please take a backup of /etc/sudoers file before doing this)
+
+Copying client to www folder
 ```
-sudo visudo
-```
-Append this at the end of the file. Replace USERNAME with your user_name
-```
-USERNAME ALL = NOPASSWD: /var/www/chapel-online/bash sch.sh
-```
-```
-Hit Ctrl+x to save and exit
+sudo mkdir /var/www/chapel-online
+sudo mv  -v path/to/cloned-directory/client/* /var/www/chapel-online/
 ```
 ## Running the tests
 Open up your favourite browser and type the following in url bar
@@ -64,8 +63,8 @@ Additional notes about how to deploy this on a live system
 ## Built With
 
 * [Bootstrap](http://getbootstrap.com/getting-started/) - Frontend framework 
-* [PHP 5](https://maven.php.org/) - Restful API
-* [Python 3.4](https://python.org) - Main controllers
+* [Twisted Engine](https://twistedmatrix.com/) - Async Server Engine
+* [Python 2.7](https://python.org) - Main controllers
 
 ## Authors
 
