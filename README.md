@@ -40,7 +40,7 @@ sudo mv  -v path/to/cloned-directory/version\ 1.1/src/* /var/www/chapel-online/s
 ## Running the tests
 Open up your favourite browser and type the following in url bar
 ```
-localhost:80/chapel-online/
+localhost:80/chapel-online/client/
 ```
 Demo
 ```
