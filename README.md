@@ -27,9 +27,7 @@ pip install autobahn[twisted]
 pip install docker
 pip install twisted
 ```
-```
 
-```
 Providing necessary permissions (please take a backup of /etc/sudoers file before doing this)
 
 Copying client to www folder
