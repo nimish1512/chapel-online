@@ -1,10 +1,9 @@
 $(document).ready(function() {
 	var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/chrome");
+    editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/c_cpp");
     document.getElementById('editor').style.fontSize='16px';
-    editor.setValue('#include <stdio.h> \n\nint main(){\n\n\tprintf("yes");\n\treturn 0;\n}');
-    
+    editor.setValue('\n#include <stdio.h> \n\nint main(){\n\n\tprintf("yes");\n\treturn 0;\n}');
   if(!("WebSocket" in window)){
   $('#chat').fadeOut("fast");
   $('<p>Oh no, you need a browser that supports WebSockets. How about <a href="http://www.google.com/chrome">Google Chrome</a>?</p>').appendTo('#container');
@@ -15,7 +14,7 @@ $(document).ready(function() {
 
       function connect(){
           var socket;
-          var host = "ws://localhost:8000";
+          var host = "ws://139.59.11.10:8000";
 
           try{
               var socket = new WebSocket(host);
@@ -24,11 +23,13 @@ $(document).ready(function() {
 
               socket.onopen = function(){
               	alert("Connected");
+                $('.status').empty();
+                $('.status').append('Status: Idle')
              	 //message('<p class="event">Socket Status: '+socket.readyState+' (open)');
               }
 
               socket.onmessage = function(msg){
-              	//console.log(msg.data);
+              	$("body").mLoading('hide');
               	terminal(msg.data);
              	 //message('<p class="message">Received: '+msg.data);
               }
@@ -55,7 +56,7 @@ $(document).ready(function() {
 
           function terminal(msg){
           	msg = msg.replace('\n','<br>');
-            $('.terminal').append(msg);
+            $('.display').append(msg);
           }
 
           $('.run').on('click',function(event) {
@@ -66,26 +67,24 @@ $(document).ready(function() {
           		else{
           			event.preventDefault();
           			var text = editor.getValue();
-          			$('.terminal').empty()
+          			$('.display').empty()
           			if(text==""){
                   		terminal('Please enter a message');
                   		return ;
               		}
               		else{
-              			send(text);
+                    $('.status').empty();
+                    $('.status').append("Status: Running");
+                    $("body").mLoading();
+                    send(text);
               	  	}	
           	}
           		
           });	
           $('.reset').on('click',function(event) {
           		event.preventDefault();
-               editor.setValue('#include <stdio.h> \n\nint main(){\n\n\tprintf("yes");\n\treturn 0;\n}');
+               editor.setValue('\n#include <stdio.h> \n\nint main(){\n\n\tprintf("yes");\n\treturn 0;\n}');
           });
-          $('.dsc').on('click',function(event) {
-          		event.preventDefault();
-          		socket.close();
-
-          	});
           $('.resume').on('click',function(event) {
           		if(socket.readyState==socket.CLOSED || socket.readyState==socket.CLOSING){
           			alert("You are not connected to the server. Please refresh your page");
@@ -94,7 +93,8 @@ $(document).ready(function() {
           		else{
           		event.preventDefault();
           		var signal = "resume,!!";
-          		$('.terminal').empty();
+              $('.status').empty();
+              $('.status').append("Status: Running");
           		send(signal);}
           });
           $('.pause').on('click',function(event) {
@@ -105,7 +105,8 @@ $(document).ready(function() {
           		else{
           		event.preventDefault();
           		var signal = "pause,!!";
-          		$('.terminal').empty();
+              $('.status').empty();
+              $('.status').append("Status: Paused");
           		send(signal);}
           });
 
